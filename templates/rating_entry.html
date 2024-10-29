@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        a {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+        <form method="post" action="/check_rating_entry">
+        <h1>Введите ваш ID, username и password</h1>
+        <label for="user_id">Введите ID</label>
+        <input type="number" id="user_id" name="user_id" maxlength="30" required>
+        <label for="username">Введите логин</label>
+        <input type="text" id="username" name="username" maxlength="30" required>
+        <br><br>
+        <label for="password">Введите пароль</label>
+        <input type="password" id="password" name="password" maxlength="50" required>
+        <br><br>
+        <button type="submit">Продолжить</button>
+        <br><br>
+        <h1>{{error}}</h1>
+    </form>
+</body>
+</html>

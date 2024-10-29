@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Информация о пользователе {{ user.username }}</h1>
+    <br>
+    <br>
+    <h2>Полное имя: {{ user.firstname }} {{ user.lastname }}</h2>
+    <br>
+    <h2>Оценки пользователя:</h2>
+    <ul>
+        {% for rating, game in ratings %}
+            <h3><li>{{ game.title }}: {{ rating.rating_int }}</li></h3>
+        {% endfor %}
+    </ul>
+    <h2>Отзывы пользователей:</h2>
+    <ul>
+        {% for feedback, game in feedbacks %}
+            <h3><li>{{ game.title }}: {{ feedback.feedback_text }}</li></h3>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <style>-->
+<!--        h1 {-->
+<!--            text-align: center;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Информация о пользователе {{ user.username }}</h1>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <h2>Полное имя: {{ user.firstname }} {{ user.lastname }}</h2>-->
+<!--    <br>-->
+<!--    <h2>Оценки пользователя:</h2>-->
+<!--    <ul>-->
+<!--        {% for rating in ratings %}-->
+<!--            <h3><li>{{ rating.rating_int }}</li></h3>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--    <h2>Отзывы пользователей:</h2>-->
+<!--    <ul>-->
+<!--        {% for feedback in feedbacks %}-->
+<!--            <h3><li>{{ feedback.feedback_text }}</li></h3>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+<!--</body>-->
+<!--</html>-->

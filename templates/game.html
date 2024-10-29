@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ game.title }}</h1>
+    <br>
+    <br>
+    <h2>Описание: {{ game.description }}</h2>
+    <br>
+    <h2>Оценка критиков: {{ game.rating }}</h2>
+    <br>
+    <h2>Цена: {{ game.price }}</h2>
+    <br>
+    <h2>Общие отзывы: {{ game.feedback }}</h2>
+    <br>
+         <u><h2>ID игры: {{ game.id }}</h2></u>
+    <br>
+    <h2>Отзывы наших пользователей:</h2>
+    <ul>
+        {% for rating, user in ratings %}
+            <h3><li>{{ user.username }}: {{ rating.rating_int }}</li></h3>
+        {% endfor %}
+    </ul>
+    <h2>Оценки наших пользователей:</h2>
+    <ul>
+        {% for feedback, user in feedbacks %}
+            <h3><li>{{ user.username }}: {{ feedback.feedback_text }}</li></h3>
+        {% endfor %}
+    </ul>
+</body>
+</html>
